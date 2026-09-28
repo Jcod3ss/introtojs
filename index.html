@@ -1,14 +1,14 @@
 <link rel="stylesheet" href="css/styles.css">
 <script src="js/nn.min.js"></script>
 <script>
-  /* global nn */
+  /* snow */
 
   function tenPrint() {
-    const hue = nn.random(360)
-    const clr = nn.hsl(hue, 100, 20)
-    const chars = '─ │ ┌ ┐ └ ┘ ├ ┤ ┬ ┴ ┼'
+    const hue = nn.random(100,200)
+    const clr = nn.hsl(hue, 50, 50)
+    const chars = '*.*.*.* *.*'
     let pattern = ''
-    nn.times(600, () => pattern += nn.random(chars))
+    nn.times(1000, () => pattern += nn.random(chars))
     nn.get('body')
       .content(pattern)
       .css('background', clr)
